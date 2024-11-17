@@ -1,0 +1,309 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/* This is for home section  */
+#home {
+    background-image: url("./img/fountain-bg.jpg ");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(31, 31, 31, 0.571); /* Using rgba for transparency */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+#home .content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+#home h4{
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* This is for info section  */
+#info{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+#info .info-box{
+    width: 45%;
+    height: 100%;
+}
+#info .info-box .img{
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+}
+body h3{
+    font-size: 2rem;
+    text-align: center;
+    color:#E9C46A ;
+}
+
+
+/* This is for type section  */
+#type{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+.para{
+    padding: 2rem;
+    text-align: center;
+    color: #a3894a;
+}
+#type .pool-images{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#type .pool-images .types-img{
+    width: 25%;
+    margin: 2rem;
+}
+#type .pool-images .types-img img{
+    display: block;
+    margin: 1px auto;
+    width: 300px;
+    height: 300px;
+}
+#type .pool-images .types-img img:hover{
+    cursor: pointer;
+}
+#type .pool-images .types-img  p{
+    width: 100%;
+    background-color: #a3894a;
+    color: black;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+/* This is for construction  */
+#construction{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0rem;
+    background-color: #1a1a1a;
+}
+#construction .const-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#construction p{
+    color: black;
+}
+#construction .const-container .const-box{
+    width: 30%;
+    margin: 1rem;
+}
+
+
+.section_our_solution .row {
+    align-items: center;
+  }
+  
+  .our_solution_category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .our_solution_category .solution_cards_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .solution_cards_box .solution_card {
+    flex: 0 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 310px;
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover {
+    background: #3A6EA5;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+  }
+  
+  .solution_cards_box .solution_card:hover::before {
+    background: rgb(85 108 214 / 10%);
+  }
+  
+  .solution_cards_box .solution_card:hover .solu_title h3,
+  .solution_cards_box .solution_card:hover .solu_description p {
+    color: #fff;
+  }
+  
+  .solution_cards_box .solution_card:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+  }
+  
+  .solution_cards_box .solution_card:hover .solu_description button {
+    background: #fff !important;
+    color: #3A6EA5;
+  }
+  
+  .solution_card .so_top_icon {
+  }
+  
+  .solution_card .solu_title div {
+    color: #212121;
+    font-size: 1.3rem;
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  
+  .solution_card .solu_description p {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .solution_card .solu_description button {
+    border: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+      140deg,
+      #42c3ca 0%,
+      #42c3ca 50%,
+      #42c3cac7 75%
+    ) !important;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 16px;
+  }
+  
+  .our_solution_content div {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  
+
+  
+  .hover_color_bubble {
+    position: absolute;
+    background: rgb(54 81 207 / 15%);
+    width: 100rem;
+    height: 100rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: 16rem;
+    border-radius: 50%;
+    transform: rotate(-36deg);
+    left: -18rem;
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover .hover_color_bubble {
+    top: 0rem;
+  }
+  
+  .solution_cards_box .solution_card .so_top_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .solution_cards_box .solution_card .so_top_icon img {
+    width: 40px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+
+
+@media (max-width:987px){
+  #type .pool-images .types-img {
+    width: 40%;
+    margin: 2rem;
+}
+#construction .const-container .const-box {
+  width: 40%;
+  margin: 1rem;
+}
+}
+
+@media (max-width:979px){
+  #info{
+    flex-direction: column-reverse;
+  }
+  #info .info-box {
+    width: 80%;
+    height: 100%;
+}
+}
+
+@media(max-width:640px){
+  #construction .const-container .const-box {
+    width: 75%;
+    margin: 1rem;
+}    #type .pool-images .types-img {
+  width: 80%;
+  margin: 2rem;
+}
+}

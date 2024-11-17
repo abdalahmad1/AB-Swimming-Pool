@@ -1,0 +1,296 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* This is for home section  */
+#home {
+    background-image: url("./img/bg10.jpg ");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(31, 31, 31, 0.571); /* Using rgba for transparency */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+#home .content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+#home h3{
+    text-align: center;
+}
+
+/* This is for landscaping Section  */
+
+#landscaping{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+}
+#landscaping .landscaping-box{
+    width: 45%;
+    height: 100%;
+    margin: 2rem;
+}
+#landscaping h2{
+    color: #c1cfda;
+    padding-top: 2rem;;
+}
+#landscaping p{
+    color: #a3894a;
+}
+#landscaping h3{
+    color: #E9C46A;
+    font-size: 1.8rem;;
+}
+.carousel-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-container img{
+    border-radius: 10rem;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #717171;
+}
+
+
+/* This is for land-container  */
+#land-container{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.circle {
+    position: relative;
+    margin: 1rem;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.circle::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #0676ee;
+    border-radius: 50%;
+}
+.circle::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 8px dotted #ffffffa9;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.circle:hover::after {
+    animation: rotate 3s linear infinite;
+}
+.circle h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #E9C46A;
+}
+.circle p {
+    font-size: 0.9em;
+    color: #a3894a;
+    padding: 0 1em;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* This is for importance-container  */
+#importance{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#importance .important-box{
+    width: 45%;
+}
+#importance .important-box img{
+    height: 100%;
+    width: 100%;
+    margin: 2rem;
+}
+#importance .important-box h3{
+    color: #E9C46A;
+}
+#importance .important-box h4{
+    color: #E9C46A;
+}
+#importance .important-box p{
+    color: #a3894a;
+}
+#importance .important-box p img{
+    width: 20px;
+    margin: 0px 6px;
+    height: 20px;
+}
+
+
+/* This is for maintenance  */
+#maintenance{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+#maintenance p{
+    color: #a3894a;
+}
+#maintenance h3{
+    color: #E9C46A;
+}
+#maintenance .pool-images{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#maintenance .pool-images .types-img{
+    width: 30%;
+    margin: 1rem;
+}
+#maintenance .pool-images .types-img img{
+    display: block;
+    margin: 1px auto;
+    width: 300px;
+    height: 300px;
+}
+#maintenance .pool-images .types-img  p{
+    width: 100%;
+    background-color: #a3894a;
+    color: black;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+
+@media (max-width:977px) {
+    #maintenance .pool-images .types-img {
+        width: 45%;
+        margin: 1rem;
+    }
+}
+@media (max-width:970px){
+    #landscaping{
+        flex-direction: column;
+    }
+    #landscaping .landscaping-box {
+        width: 90%;
+        height: 100%;
+        margin: 2rem;
+    }
+    .carousel-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width:807px){
+    #importance{
+        flex-direction: column-reverse;
+    }
+    #importance .important-box {
+        width: 95%;
+    }
+    .important-img{
+        display: flex;
+    }
+    #importance .important-box img {
+        height: 90%;
+        width: 46%;
+        margin: 1rem;
+    }
+}
+@media (max-width:690px){
+    #maintenance .pool-images .types-img {
+        width: 85%;
+        margin: 1rem;
+    }
+}

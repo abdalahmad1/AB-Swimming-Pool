@@ -1,0 +1,271 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* This is for home section  */
+#home {
+    background-image: url("./img/bg7.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(31, 31, 31, 0.571); /* Using rgba for transparency */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+#home .content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+#home h3{
+    text-align: center;
+}
+
+/* This is for extra-container  */
+#extra-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+}
+#extra-container .sidebar{
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#extra-container .main{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+/* This is for sidebar */
+.sidebar .sidebar-container {
+    width: 70%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    background-color: black;
+  }
+  
+  .sidebar .sidebar-container ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+  }
+  .sidebar .sidebar-container ul p{
+    color: #a3894a;
+    font-size: 1.5rem;
+    border-left: 6px solid #a3894a;
+    margin: 1rem 1rem;
+    font-weight: bold;
+    padding-left: 4px; 
+  }
+  .sidebar .sidebar-container li {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #2d2d2d;
+  }
+  
+  .sidebar .sidebar-container li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #a3894a;
+    transition: left 0.5s ease;
+    z-index: 1;
+  }
+  
+  .sidebar .sidebar-container li:hover::before {
+    left: 0;
+  }
+  
+  .sidebar .sidebar-container li a {
+    display: block;
+    text-decoration: none;
+    color: #a3894a;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 0.1rem;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar .sidebar-container li:hover a {
+    color: black;
+  }
+
+.sidebar .location{
+    width: 70%;
+    margin: 2rem 0rem;
+    background-color: black;
+} 
+
+.sidebar .location h5{
+    color: #a3894a;
+    font-size: 1.5rem;
+    border-left: 6px solid #a3894a;
+    margin: 1rem 1rem;
+    font-weight: bold;
+    padding-left: 4px;
+}
+.sidebar .location ul{
+    padding: 0rem;
+}
+.sidebar .location ul li{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem;
+
+}
+.sidebar .location ul li img{
+    height: 15px;
+    width: 20px;
+    margin: 3px 6px;
+}
+.sidebar .location li a {
+    text-decoration: none;
+    list-style: none;
+    color: #a3894a;
+    font-size: 1rem;
+}
+
+/* This is for content  */
+.extra-box .main  h2{
+    color: #c1cfda;
+    padding-top: 2rem;
+}
+.extra-box .main .content p{
+    color: #E9C46A;
+    padding: 0rem 4rem;
+    font-size: 1.2rem;
+}
+.extra-box .main .content-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.extra-box .main .content-images img{
+    margin: 1rem 2rem;
+}
+
+/* This is for choose container  */
+.extra-box .main .choose h4{
+    color: #E9C46A;
+    padding: 0rem 4rem;
+}
+.extra-box .main .choose p {
+    color: #E9C46A;
+    padding: 0rem 4rem;
+}
+.extra-box .main .choose p img{
+    width: 20px;
+    margin: 0px 6px;
+    height: 20px;
+}
+.extra-box .main .choose-img img{
+    display: block;
+    margin: 1rem auto;
+    width: 70%;
+    height: 100%;
+}
+
+/* This is for swimming pools types  */
+.extra-box .main .types h4{
+    padding: 1rem 4rem;
+    color: #E9C46A;
+    font-size: 1.5rem;
+}
+.extra-box .main .types p{
+    padding: 0rem 4rem;
+    color: #E9C46A;
+}
+.extra-box .main .pool-images{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.extra-box .main .pool-images .types-img{
+    width: 40%;
+    margin: 2rem;
+}
+.extra-box .main .pool-images .types-img img{
+    display: block;
+    margin: 1px auto;
+    width: 300px;
+    height: 300px;
+}
+.extra-box .main .pool-images .types-img  p{
+    width: 100%;
+    background-color: #a3894a;
+    color: black;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+/* This is for construction  */
+.extra-box .main .construction p{
+    padding: 0rem 4rem;
+    color:#E9C46A;
+}
+.extra-box .main .construction p img{
+    width: 20px;
+    margin: 0px 6px;
+    height: 20px;
+}
+
+@media (max-width:960px){
+    #extra-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: none;
+    }
+    
+}
+@media (max-width:710px) {
+    .extra-box .main .pool-images .types-img p {
+        width: 110%;
+        background-color: #a3894a;
+        color: black;
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+
+@media(max-width:670px){
+    .extra-box .main .pool-images .types-img {
+        width: 70%;
+        margin: 2rem;
+    }
+}

@@ -1,0 +1,197 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* This is for home section  */
+#home {
+    background-image: url("./img/bg9.jpg ");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(31, 31, 31, 0.571); /* Using rgba for transparency */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+#home .content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+#home h3{
+    text-align: center;
+}
+
+/* This is for extra-container  */
+#extra-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+}
+#extra-container .sidebar{
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#extra-container .main{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+/* This is for sidebar */
+.sidebar .sidebar-container {
+    width: 70%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    background-color: black;
+  }
+  
+  .sidebar .sidebar-container ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+  }
+  .sidebar .sidebar-container ul p{
+    color: #a3894a;
+    font-size: 1.5rem;
+    border-left: 6px solid #a3894a;
+    margin: 1rem 1rem;
+    font-weight: bold;
+    padding-left: 4px; 
+  }
+  .sidebar .sidebar-container li {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #2d2d2d;
+  }
+  
+  .sidebar .sidebar-container li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #a3894a;
+    transition: left 0.5s ease;
+    z-index: 1;
+  }
+  
+  .sidebar .sidebar-container li:hover::before {
+    left: 0;
+  }
+  
+  .sidebar .sidebar-container li a {
+    display: block;
+    text-decoration: none;
+    color: #a3894a;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 0.1rem;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar .sidebar-container li:hover a {
+    color: black;
+  }
+
+.sidebar .location{
+    width: 70%;
+    margin: 2rem 0rem;
+    background-color: black;
+} 
+
+.sidebar .location h5{
+    color: #a3894a;
+    font-size: 1.5rem;
+    border-left: 6px solid #a3894a;
+    margin: 1rem 1rem;
+    font-weight: bold;
+    padding-left: 4px;
+}
+.sidebar .location ul{
+    padding: 0rem;
+}
+.sidebar .location ul li{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem;
+
+}
+.sidebar .location ul li img{
+    height: 15px;
+    width: 20px;
+    margin: 3px 6px;
+}
+.sidebar .location li a {
+    text-decoration: none;
+    list-style: none;
+    color: #a3894a;
+    font-size: 1rem;
+}
+/* This is for content section  */
+.extra-box .main h2{
+    color: #c1cfda;
+}
+.extra-box .main p{
+    color:#a3894a;
+    padding: 0rem 4rem;
+}
+
+.extra-box .main h3{
+    color: #E9C46A;
+    margin: 1rem 4rem;
+    font-size: 2rem;
+}
+.extra-box .main .img-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.extra-box .main .img-container .img-box{
+    width: 40%;
+    height: 100%;
+    margin: 1rem;
+}
+.extra-box .main .img-container .img-box img{
+    width: 100%;
+    height: 100%;
+}
+.extra-box .main .img-container .img-box h5{
+    color: #a3894a;
+    text-align: center;
+}
+.extra-box .main .img-container .img-box:hover{
+    border: 1px solid #E9C46A;
+    border-style: dashed;
+    border-radius: 20px;
+    cursor: pointer;
+}

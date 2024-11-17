@@ -1,0 +1,109 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* This is for home section  */
+#home {
+    background-image: url("./img/bg7.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(31, 31, 31, 0.571); /* Using rgba for transparency */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+#home .content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+#home h3{
+    text-align: center;
+}
+
+/* This is for Gallery Section  */
+#Gallery{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    padding: 2rem 0rem;
+}
+#Gallery h2{
+    text-align: center;
+    color:#E9C46A ;
+}
+#Gallery .img-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+#Gallery .img-container .img-box{
+    width: 30%;
+    margin: 1rem;
+}
+#Gallery .img-container .img-box img{
+    width: 300px;
+    height:300px ;
+}
+#Gallery .content p{
+    text-align: center;
+    color: #a3894a;;
+}
+#Gallery .border{
+    display: block;
+    width: 20%;
+    margin: auto;
+    border: 10px solid #E9C46A ;
+}
+
+@media (max-width:960px){
+    #Gallery .img-container .img-box {
+        width: 40%;
+        margin: 1rem;
+    }
+    #Gallery .img-container .img-box img {
+        width: 350px;
+        height: 330px;
+    }
+}
+@media (max-width:830px){
+    #Gallery .img-container .img-box {
+        width: 46%;
+        margin: 1rem;
+    }
+}
+@media (max-width: 799px){
+    #Gallery .img-container .img-box {
+        width: 100%;
+        margin: 1rem;
+    }
+    #Gallery .img-container .img-box img {
+        width: 80%;
+        height: 330px;
+        display: block;
+        margin: auto;
+    }
+}
